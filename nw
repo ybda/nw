@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# e - edit ox_lst
+# b - edit this script
+# d - dictionary translate mode
+# p - turn off paging (less)
+
+# link to oxford word list
+ox_lst="$HOME/.config/nw_oxford.list"
+# YOUR language
+lang_my='ru'
+# FOREIGN language (lang of words in dictionary)
+lang_foreign='en'
+
+
+
+if [ ! -f "$ox_lst" ]; then
+  echo "Oxford word list path \"$ox_lst\" is not correct. Change path in this script or create word list by this path."
+  exit 1
+fi  
+
+if [[ "$1" == '--help' ]]; then
+  echo 'Usage: nw [OPTION]'
+  echo 'New random word from a list of words. Might be helpful for learning foreign language. Remove a word from the list when you sure you know it'
+  echo ''
+  echo -e "  -d\tenable dictionary mode for translate-shell" 
+  echo -e "  -p\tdisable bat's paging"
+  echo -e "  -P\talways bat's paging"
+  echo -e "  -e\tedit dictionary"
+  echo -e "  -b\tedit this bash script"
+  echo ''
+  echo 'Examples:'
+  echo -e '  nw      Basically show new word'
+  echo -e '  nw -d   Show new word in dictionary mode'
+  echo -e '  nw -e   Edit your list of words'
+  echo -e '  nw -b   Edit this bash script'
+  echo -e '  while true; do nw -P; done   Infinite repeat of new words with paging'
+
+  exit 0
+fi
+
+
+while getopts :dpPeb arg; do
+  case "${arg}" in
+    d)transarg='-d';;
+    p)batarg='--paging=never';;
+    P)batarg='--paging=always';;
+    e)vi $ox_lst; exit 0;;
+    b)vi $0; exit 0;;
+  esac
+done
+
+
+get_n_line() {
+  sed -n "$1p" "$ox_lst"
+}
+get_rand() {
+  shuf -i $1-$2 -n 1
+}
+
+
+count_of_lines="$(cat "$ox_lst" | wc -l)"
+rand_word="$(get_n_line $(get_rand 1 $count_of_lines))"
+
+
+trans -e google $transarg $lang_foreign:$lang_my $rand_word | batcat $batarg
+
