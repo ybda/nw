@@ -1,5 +1,5 @@
 # nw
-This basic script shows you new random word from local list of words with translation. Might be helpful for learning foreign language. Remove a word from the list when you sure you know it. In this repo for example placed list of Oxford 3000 + Oxford 5000.
+`nw` is a basic bash script that shows you new random word from local list of words with translation. Might be helpful for learning foreign language. Remove a word from the list when you sure you know it. In this repo for example placed list of Oxford 3000 + Oxford 5000 in `oxford_3000_5000.list` file.
 
 
 ## Dependencies: 
@@ -7,7 +7,8 @@ This basic script shows you new random word from local list of words with transl
 
 
 ## Installation 
-Put bash script "nw" and any list of words (you could use oxford list from this repo) wherever you want and change first few variables as you need. In variables you may want to change paths and languages.
+- Put `nw` and any list of words (you could use oxford list from this repo) wherever you want
+- Change first few variables in `nw` as you need (in variables you may want to change paths and languages).
 
 
 ### Usage: nw [OPTION]
