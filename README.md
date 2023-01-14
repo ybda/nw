@@ -1,5 +1,5 @@
 # nw
-`nw` is a basic bash script that shows you new random word from local list of words with translation. Might be helpful for learning foreign language. Remove a word from the list when you sure you know it. In this repo for example placed list of Oxford 3000 + Oxford 5000 in `oxford_3000_5000.list` file.
+`nw` is a basic bash script that shows you a new random word from your local list of words with translation. Might be helpful to learn a new language. Remove a word from the list when you sure you know it. In this repo for example placed list of Oxford 3000 + Oxford 5000 in `oxford_3000_5000.list` file.
 
 
 # Installation 
