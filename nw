@@ -2,7 +2,7 @@
 
 
 # link to oxford word list
-ox_lst="$HOME/.config/nw_oxford.list"
+ox_lst="$HOME/.config/oxford_3000_5000.list"
 # YOUR language
 lang_my='ru'
 # FOREIGN language (lang of words in dictionary)
