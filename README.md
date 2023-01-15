@@ -14,17 +14,17 @@ USAGE:
     nw [OPTIONS]
 
 OPTIONS:
-    -d	     enable dictionary mode for translate-shell
-    -p	     disable bat's paging
-    -P	     enable bat's paging
-    -e	     edit dictionary
-    -b	     edit this bash script
-    --help   help stuff
+    -d	      enable dictionary mode for translate-shell
+    -p	      disable bat's paging
+    -P	      enable bat's paging
+    -e	      edit dictionary
+    -b	      edit this bash script
+    --help    display this help and exit
 
 EXAMPLES:
-    nw       Basically show new word
-    nw -d    Show new word in dictionary mode
-    nw -e    Edit your list of words
-    nw -b    Edit this bash script
-    while true; do nw -P; done   Infinite repeat of new words with paging
+    nw        Basically show new word
+    nw -d     Show new word in dictionary mode
+    nw -e     Edit your list of words
+    nw -b     Edit this bash script
+    while true; do nw -P; done     Infinite repeat of new words with paging
 ```
