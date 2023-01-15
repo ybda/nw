@@ -28,3 +28,5 @@ EXAMPLES:
     nw -b     Edit this bash script
     while true; do nw -P; done     Infinite repeat of new words with paging
 ```
+
+![2023-01-15_18-11](https://user-images.githubusercontent.com/31192670/212542942-706c713f-ad7a-46fc-96ee-a29ac7d4f063.png)
